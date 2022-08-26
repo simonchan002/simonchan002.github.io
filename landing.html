@@ -20,7 +20,7 @@
 				<!-- Header -->
 				<!-- Note: The "styleN" class below should match that of the banner element. -->
 					<header id="header" class="alt style2">
-						<a href="index.html" class="logo"><strong>Forty</strong> <span>by HTML5 UP</span></a>
+						<a href="index.html" class="logo"><strong>Connect Four</strong> <span>by Simon Chan</span></a>
 						<nav>
 							<a href="#menu">Menu</a>
 						</nav>
@@ -48,11 +48,11 @@
 								<img src="images/pic07.jpg" alt="" />
 							</span>
 							<header class="major">
-								<h1>Landing</h1>
+								<h1>Ever Expanding Connect Four</h1>
 							</header>
 							<div class="content">
-								<p>Lorem ipsum dolor sit amet nullam consequat<br />
-								sed veroeros. tempus adipiscing nulla.</p>
+								<p>Play connect four like never before<br />
+								</p>
 							</div>
 						</div>
 					</section>
@@ -64,9 +64,13 @@
 							<section id="one">
 								<div class="inner">
 									<header class="major">
-										<h2>Sed amet aliquam</h2>
+										<h2> Why use dynamic arrays? </h2>
 									</header>
-									<p>Nullam et orci eu lorem consequat tincidunt vivamus et sagittis magna sed nunc rhoncus condimentum sem. In efficitur ligula tate urna. Maecenas massa vel lacinia pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis libero. Nullam et orci eu lorem consequat tincidunt vivamus et sagittis magna sed nunc rhoncus condimentum sem. In efficitur ligula tate urna.</p>
+									<p> 
+										Creating arrays on the heap allows for automatic resizing. Therefore, instead of vectors which allocate the storage beforehand,
+										arrays can expand to accommodate for the new container needed to hold the characters on the board. This saves alot of memory although
+										it might now be so efficient for lookups and deleting elements. 
+									</p>
 								</div>
 							</section>
 
@@ -74,14 +78,17 @@
 							<section id="two" class="spotlights">
 								<section>
 									<a href="generic.html" class="image">
-										<img src="images/pic08.jpg" alt="" data-position="center center" />
+										<img src="images/m_data.PNG" alt="" data-position="center center" />
 									</a>
 									<div class="content">
 										<div class="inner">
 											<header class="major">
-												<h3>Orci maecenas</h3>
+												<h3>Connect 4 Board components</h3>
 											</header>
-											<p>Nullam et orci eu lorem consequat tincidunt vivamus et sagittis magna sed nunc rhoncus condimentum sem. In efficitur ligula tate urna. Maecenas massa sed magna lacinia magna pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis tempus.</p>
+											<p>The board is represented as an object that holds the dynamic arrays. The main structure in the code is "m_data" and it is a dynamic array of size 4. 
+												Each container of m_data points to another array to make up the rows of the board. The row size is determined by the size of m_data and the column size is
+												determined by the size of the arrays m_data points at. M_data and the arrays can expand past the original dimensions of 5x4 if a piece goes 
+												out of bounds.</p>
 											<ul class="actions">
 												<li><a href="generic.html" class="button">Learn more</a></li>
 											</ul>
